@@ -17,12 +17,12 @@ app.post('/users', (req, res) => {
     res.send('Post Users')
 })
 
-app.put('/users', (req, res) => {
-    res.send('Put Users')
+app.put('/users/:id', (req, res) => {
+    res.send(req.params.id)
 })
 
-app.delete('/users', (req, res) => {
-    res.send('Delete Users')
+app.delete('/users/:Userid', (req, res) => {
+    res.send(req.params.Userid)
 })
 
 app.listen(3000, () => {
