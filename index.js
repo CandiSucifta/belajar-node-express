@@ -2,7 +2,11 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('Home')
+    const kelas = {
+        id:5,
+        nama:'Candi sucifta'
+    }
+    res.json(kelas)
 })
 
 app.get('/about', (req, res) => {
